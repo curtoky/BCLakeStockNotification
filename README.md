@@ -1,3 +1,8 @@
+# AWS ARCHITECTURE OVERVIEW
+![LakeStockNotification](https://user-images.githubusercontent.com/23089491/171752983-6e0181c4-5641-464e-a4c4-036f8a0b0fab.png)
+
+<br/><br/><br/><br/><br/>
+
 # PRE-REQS
 #### This guide assumes the following tools are already installed on your computer, if not please download and install from here:
 ##### AWS CLI - https://aws.amazon.com/cli/
