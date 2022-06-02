@@ -1,4 +1,14 @@
-# AWS ARCHITECTURE OVERVIEW
+# OVERVIEW
+A fun side-project to track when BC lakes are being stocked with fish. The application is a fully deployable serverless application utilizing:
+* A Flask web application for sign up and unsubscribing hosted in ECS Fargate
+    * User registers with name, phone number, and region of interest (IE. Lower Mainalnd)
+* A lambda function scheduled by EventBridge that
+    * Scrapes for any newly updated lakes
+    * Checks DynamoDB for all users and confirms if those lakes are in their region of interest, if so, send a personalized text messaging informing them that the lakes have been restocked.
+<img src="https://user-images.githubusercontent.com/23089491/171757822-b2080a8d-1963-41bc-8a27-cfe09bc49417.jpg" width="557" height="696">
+<br/><br/>
+
+# AWS ARCHITECTURE
 ![LakeStockNotification](https://user-images.githubusercontent.com/23089491/171752983-6e0181c4-5641-464e-a4c4-036f8a0b0fab.png)
 
 <br/><br/><br/><br/><br/>
