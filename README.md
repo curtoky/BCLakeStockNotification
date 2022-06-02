@@ -1,7 +1,7 @@
 # OVERVIEW
 A fun side-project to track when BC lakes are being stocked with fish. The application is a fully deployable serverless application utilizing:
 * A Flask web application for sign up and unsubscribing hosted in ECS Fargate
-    * User registers with name, phone number, and region of interest (IE. Lower Mainalnd)
+    * User registers with name, phone number, and region of interest (IE. Lower Mainland)
 * A lambda function scheduled by EventBridge that
     * Scrapes for any newly updated lakes
     * Checks DynamoDB for all users and confirms if those lakes are in their region of interest, if so, send a personalized text messaging informing them that the lakes have been restocked.
