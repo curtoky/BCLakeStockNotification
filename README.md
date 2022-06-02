@@ -9,7 +9,7 @@
 ##### DOCKER - https://www.docker.com/products/docker-desktop/
 ##### TERRAFORM - https://www.terraform.io/downloads
 
-<br/><br/><br/><br/><br/>
+<br/><br/>
 
 # AWS CLI
 
