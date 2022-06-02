@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}SUBSCRIBE{% endblock %}
+{% block content %}
+	<div class="container">
+		{%if error_statement%}
+		<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		  <strong>{{error_statement}}
+		  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		{%endif%}
+	<div class="mt-5">	
+	<div class="shadow p-3 mb-5 mt-5 bg-body rounded">
+		<br/>
+		<h2>Sign up for notifications</h2>
+		<br/>
+		
+		<form class="form-floating" action="/form" method="POST">
+			<div class="mb-3">
+				<input type="text" class="form-control" placeholder = "Name" name="name" value="{{name}}">
+			</div>
+			<div class="mb-4">
+				<input type="text" class="form-control" placeholder = "Phone Number" name="phone_number" value="{{phone_number}}">
+			</div>
+					<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			  List Regions
+			</button>
+			<div class="mb-3 mt-1" >
+				<input type="text" class="form-control" placeholder = "Region" name="region" value="{{region}}">
+			</div>
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Please select from the following</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				  </div>
+				  <div class="modal-body">
+					<p>Available Regions:</p>
+					<ul>
+						<li>Cariboo</li>
+						<li>East Kootenay</li>
+						<li>Lower Mainland</li>
+						<li>Okanagan</li>
+						<li>Omineca</li>
+						<li>Peace</li>
+						<li>Skeena</li>
+						<li>Thompson-Nicola</li>
+						<li>Vancouver Island</li>
+						<li>West Kootenay</li>
+					</ul>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+	  
+			<br/>
+			<button type="submit" class="btn btn-secondary">Subscribe</button>
+		</form>
+
+
+	</div>	
+	</div>
+	</div>
+{% endblock %}

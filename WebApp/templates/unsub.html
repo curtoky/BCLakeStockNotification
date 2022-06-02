@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Unsubscribe{% endblock %}
+{% block content %}
+<div class="container">
+	{%if error_statement%}
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+	  <strong>{{error_statement}}
+	  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	{%endif%}
+<div class="shadow p-3 mb-5 mt-5 bg-body rounded">
+	<h2>Enter your phone number to be unsubscribed.</h2>
+	<br/>
+	<form action="/unsubform" method="POST">
+	  <div class="mb-3">
+		<input type="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder = "Phone Number" name="unsubphone_number" value="{{unsubphone_number}}">
+	  </div>
+	  <br/>
+	  <button type="submit" class="btn btn-secondary">Unsubscribe</button>
+	</form>
+</div>
+</div>
+{% endblock %}
