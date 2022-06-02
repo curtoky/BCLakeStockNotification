@@ -25,7 +25,7 @@ A fun side-project to track when BC lakes are being stocked with fish. The appli
 
 #### Create an ECR repository to upload the Docker App to.
 ```
-cd LakeStockNotification/WebApp/
+cd BCLakeStockNotification/WebApp/
 
 aws ecr create-repository \
     --repository-name flask-repo \
