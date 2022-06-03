@@ -1,10 +1,3 @@
-#TO-DO#
-#SECRETS MANAGER FOR LAMBDA?#
-#CLEAN UP CODE#
-    #MODULES?#
-    #CLEAN UP PYTHON
-    #TEST
-
 provider "aws" {
   region = "us-east-1"
  default_tags {
